@@ -78,7 +78,7 @@ const text = css`
 
 const Home = ({ data }) => (
   <Layout>
-      <SEO title="HOME"></SEO>
+      <SEO title="HIKARI BLOG"></SEO>
         <section css={box}>
             <h1 css={logo}><Logo css={logo_svg}/></h1>
             {

@@ -4,7 +4,7 @@ module.exports = {
     description: `Tech Blog`,
     siteUrl: `https://hikari-blog.vercel.app/`,
     author: `Hikari`,
-    image: `/images/ogp/png`,
+    image: `/images/ogp.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
