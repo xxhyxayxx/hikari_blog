@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `HIKARI BLOG`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Tech Blog`,
+    siteUrl: `https://hikari-blog.vercel.app/`,
+    author: `Hikari`,
+    image: `/images/ogp/png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
