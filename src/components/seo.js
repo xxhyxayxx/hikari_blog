@@ -18,7 +18,6 @@ function SEO({ description, lang, meta, title }) {
           siteMetadata {
             title
             description
-            author
           }
         }
       }
@@ -52,6 +51,7 @@ function SEO({ description, lang, meta, title }) {
           property: `og:type`,
           content: `website`,
         },
+        { property: 'og:image', content: '../images/ogp.png' },
         {
           name: `twitter:card`,
           content: `summary`,
