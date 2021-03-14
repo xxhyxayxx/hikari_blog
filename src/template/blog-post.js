@@ -115,7 +115,7 @@ const Post = ({ data }) => {
     const post = data.markdownRemark;
     return(
         <Layout css={contents}>
-            <SEO title={post.frontmatter.title} description={post.except}></SEO>
+            <SEO title={post.frontmatter.title} description={post.excerpt}></SEO>
             <Link to="/"><h1 css={logo}><Logo2 css={pc} /><Logo3 css={sp} /></h1></Link>
             <section css={box}>
                 <p css={date_category}><span css={date}>{post.frontmatter.date}</span><span css={category}>{post.frontmatter.category}</span></p>
