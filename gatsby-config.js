@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `HIKARI BLOG`,
-    description: `Tech Blog`,
+    description: `Tech系や勉強系、その他思ったことなど`,
     siteUrl: `https://hikari-blog.vercel.app/`,
     author: `Hikari`,
     image: `/images/ogp.png`,

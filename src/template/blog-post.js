@@ -115,7 +115,7 @@ const Post = ({ data }) => {
     const post = data.markdownRemark;
     return(
         <Layout css={contents}>
-            <SEO title={post.frontmatter.title} ></SEO>
+            <SEO title={post.frontmatter.title} description={post.except}></SEO>
             <Link to="/"><h1 css={logo}><Logo2 css={pc} /><Logo3 css={sp} /></h1></Link>
             <section css={box}>
                 <p css={date_category}><span css={date}>{post.frontmatter.date}</span><span css={category}>{post.frontmatter.category}</span></p>
@@ -133,6 +133,7 @@ export const query = graphql`
     query($slug: String!){
         markdownRemark(fields:{slug:{eq:$slug}}){
             html
+            excerpt(truncate: true)
             frontmatter{
                 title
                 date
