@@ -91,6 +91,7 @@ const text = css`
     
     p{
         padding:8px 0;
+        white-space: pre-wrap;
     }
     
     h1{
