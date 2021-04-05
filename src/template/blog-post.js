@@ -2,6 +2,7 @@ import * as React from "react"
 import {graphql, Link} from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Iframely from "../components/Iframely";
 
 import { css } from '@emotion/react'
 import Logo2 from "../images/logo2.svg"
@@ -116,6 +117,7 @@ const Post = ({ data }) => {
     return(
         <Layout css={contents}>
             <SEO title={post.frontmatter.title} description={post.excerpt}></SEO>
+            <Iframely />
             <Link to="/"><h1 css={logo}><Logo2 css={pc} /><Logo3 css={sp} /></h1></Link>
             <section css={box}>
                 <p css={date_category}><span css={date}>{post.frontmatter.date}</span><span css={category}>{post.frontmatter.category}</span></p>
