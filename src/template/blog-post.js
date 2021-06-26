@@ -111,6 +111,7 @@ const text = css`
     h1{
         font-size:1.55rem;
         padding:25px 0 0;
+        line-height: 2.2rem;
     }
 `
 const link_home = css`
