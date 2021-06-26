@@ -26,12 +26,22 @@ const pc=css`
     @media (max-width: 980px) {
         display:none;
   }
+  @media (prefers-color-scheme: dark) {
+    .change{
+      fill:#fcfcfc;
+    }
+  }
 `
 
 const sp=css`
     display:none;
     @media (max-width: 980px) {
         display:block;
+  }
+  @media (prefers-color-scheme: dark) {
+    .change{
+      fill:#fcfcfc;
+    }
   }
 `
 
@@ -54,6 +64,10 @@ const date_category = css`
     @media (max-width: 980px) {
         padding: 120px 0 20px;
     }
+  @media (prefers-color-scheme: dark) {
+    color: #fcfcfc;
+    border-bottom: 2px solid #fcfcfc;
+  }
 `
 
 const date = css`
@@ -67,7 +81,7 @@ const category = css`
 const title = css`
     padding:50px 0 0;
     font-weight:700;
-    font-size:1.5rem;
+    font-size:1.65rem;
     letter-spacing:0.1rem;
     line-height:2.2rem;
     @media (max-width: 540px) {
@@ -77,7 +91,7 @@ const title = css`
 
 const text = css`
     padding:25px 0 0;
-    font-sie:1rem;
+    font-size:1rem;
     letter-spacing:0.08rem;
     line-height:1.9rem;
     @media (max-width: 540px) {
@@ -95,7 +109,7 @@ const text = css`
     }
     
     h1{
-        font-size:1.2rem;
+        font-size:1.55rem;
         padding:25px 0 0;
     }
 `
@@ -106,11 +120,15 @@ const link_home = css`
 
 const home = css`
     padding:10px 15px;
-    background:#000;
+    background:#131313;
     font-sie:1rem;
     letter-spacing:0.08rem;
-    color:#fff;
+    color:#fcfcfc;
     font-family:'Roboto Mono';
+  @media (prefers-color-scheme: dark) {
+    background: #fcfcfc;
+    color: #131313;
+  }
 `
 
 const Post = ({ data }) => {

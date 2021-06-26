@@ -26,6 +26,11 @@ const logo = css`
 `
 
 const logo_svg = css`
+  @media (prefers-color-scheme: dark) {
+    .change{
+      fill:#f8f8f8;
+    }
+  }
   @media (max-width: 540px) {
         width:80%;
         height:80%
@@ -76,25 +81,28 @@ const text = css`
    }
 `
 
-const Home = ({ data }) => (
-  <Layout>
+const Home = ({ data }) => {
+  return (
+    <Layout>
       <SEO title="HIKARI BLOG"></SEO>
-        <section css={box}>
-            <h1 css={logo}><Logo css={logo_svg}/></h1>
-            {
-                data.allMarkdownRemark.edges.map(({node}) => (
-                    <article key={node.id} css={article}>
-                        <Link to={node.fields.slug}>
-                                <h2 css={ttl}>{node.frontmatter.title}</h2>
-                                <p css={date_category}><span>{node.frontmatter.date}</span><span css={category}>{node.frontmatter.category}</span></p>
-                                <p css={text}>{node.excerpt}</p>
-                        </Link>
-                    </article>
-                ))
-            }
-        </section>
-  </Layout>
-)
+      <section css={box}>
+        <h1 css={logo}><Logo css={logo_svg} /></h1>
+        {
+          data.allMarkdownRemark.edges.map(({ node }) => (
+            <article key={node.id} css={article}>
+              <Link to={node.fields.slug}>
+                <h2 css={ttl}>{node.frontmatter.title}</h2>
+                <p css={date_category}><span>{node.frontmatter.date}</span><span
+                  css={category}>{node.frontmatter.category}</span></p>
+                <p css={text}>{node.excerpt}</p>
+              </Link>
+            </article>
+          ))
+        }
+      </section>
+    </Layout>
+  )
+}
 
 export default Home
 

@@ -7,3 +7,14 @@ a{
     color: #2f2f2f;
     text-decoration: none;
 }
+
+@media (prefers-color-scheme: dark) {
+    body{
+        color: #fcfcfc;
+        background: #1c1c1c;
+    }
+
+    a{
+        color: #fff;
+    }
+}

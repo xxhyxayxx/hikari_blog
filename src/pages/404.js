@@ -26,6 +26,11 @@ const error_svg = css`
         width:70%;
         height:70%
    }
+  @media (prefers-color-scheme: dark) {
+    .change{
+      fill:#f8f8f8;
+    }
+  }
 `
 
 const text_en = css`
@@ -52,10 +57,14 @@ const link_home = css`
 const home = css`
     padding:10px 15px;
     background:#000;
-    font-sie:1rem;
+    font-size:1rem;
     letter-spacing:0.08rem;
     color:#fff;
     font-family:'Roboto Mono';
+  @media (prefers-color-scheme: dark) {
+    color: #131313;
+    background: #f8f8f8;
+  }
 `
 
 
